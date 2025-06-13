@@ -23,5 +23,6 @@ A simple and responsive calculator built using **HTML**, **CSS**, and **JavaScri
 - CSS3
 - JavaScript (ES6+)
 
-## 📁 Folder Structure
+## Demerits
+Follows BODMAS(Bracket Of Division Multiplacation Addition Substraction) Rule While Calculating
 
