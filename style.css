@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #6b6b6b;
+background: linear-gradient(131deg, rgba(107, 107, 107, 1) 34%, rgba(31, 31, 31, 1) 71%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+body > div:first-child {
+    margin-bottom: 40px;
+}
+
+body > div:first-child >p {
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0f0;
+    text-shadow: 0 0 10px black;
+}
+
+#Container {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 360px;
+}
+
+#Display , #Calculated {
+    height: 60px;
+    background-color: #000;
+    color: #0f0;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#clear,
+#Enter {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#Enter {
+    background-color: #4CAF50;
+}
+#Enter:hover{
+     background-color: #0ea513;
+}
+#clear:hover{
+     background-color: #cb1a1a;
+}
+
+#Numpad {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#Numpad > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    flex: 3;
+    width: 100%;
+}
+
+.nums {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nums:hover {
+    background-color: #444;
+}
+
+#Operations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.operator {
+    background-color: #ffac13;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.operator:hover {
+    background-color: #d98200;
+}
+
+@media (max-width: 500px) {
+    #Container {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    #Display {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .nums,
+    .operator {
+        padding: 16px;
+        font-size: 1rem;
+    }
+
+    #clear,
+    #Enter {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
